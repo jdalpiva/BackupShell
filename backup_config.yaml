@@ -1,0 +1,31 @@
+# Configuração do Backup Automatizado
+# =====================================
+
+# Pasta de origem (o que será copiado)
+origem: "/home/jdalpiva/"
+
+# Pasta de destino (para onde será copiado)
+destino: "/mnt/Dados"
+
+# Diretório dos logs (~ será expandido para /home/usuario)
+log_dir: "~/logs/backup"
+
+# Quantos dias manter backups antigos antes de rotacionar
+retencao_dias: 30
+
+# Espaço mínimo livre no HD de destino (em GB).
+# Se o espaço livre for menor que este valor, o backup não será realizado
+# e uma notificação será enviada ao usuário.
+espaco_minimo_gb: 5
+
+# Pastas e padrões a serem excluídos do backup
+exclusoes:
+  - ".cache/*"
+  - "Trash/*"
+  - ".local/share/Trash/*"
+  - "__pycache__/*"
+  - "*.tmp"
+  - ".venv/*"
+  - "node_modules/*"
+  - ".thumbnails/*"
+  - "snap/*"
